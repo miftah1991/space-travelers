@@ -17,6 +17,11 @@ function MainHeader() {
     },
     {
       id: useId(),
+      path: '/Dragons',
+      name: 'Dragons',
+    },
+    {
+      id: useId(),
       path: '/MyProfile',
       name: 'My Profile',
     },
