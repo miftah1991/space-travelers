@@ -2,8 +2,8 @@ import {
   combineReducers, createStore, applyMiddleware, compose,
 } from 'redux';
 import thunk from 'redux-thunk';
+import { rocketsReducer } from '../components/rockets/Rockets';
 
-const rocketsReducer = '';
 const missionsReducer = '';
 const dragonsReducer = '';
 
