@@ -1,0 +1,32 @@
+.dragon {
+  margin: 1rem;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.dragon-image {
+  width: 14rem;
+}
+
+.dragon-info {
+  margin-left: 2rem;
+}
+
+.dragon-type {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dragon-type span {
+  margin-left: 0.4rem;
+  text-transform: capitalize;
+}
+
+.reserve-dragon {
+  background-color: rgb(0, 128, 255);
+  color: white;
+  padding: 0.5rem 2rem;
+  border-style: none;
+  border-radius: 0.3rem;
+}

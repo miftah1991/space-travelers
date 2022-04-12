@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReserveDragon from './ReserveDragon';
 
 const Dragon = (props) => {
   const {
@@ -10,10 +11,17 @@ const Dragon = (props) => {
   } = props;
 
   return (
-    <div id={id}>
-      <p>{name}</p>
-      <p>{type}</p>
-      <img src={image} alt="dragon" />
+    <div id={id} className="dragon">
+      <img src={image} alt="dragon" className="dragon-image" />
+      <div className="dragon-info">
+        <h2>{name}</h2>
+        <p className="dragon-type">
+          The type of this Dragon is:
+          <span>{type}</span>
+          .
+        </p>
+        <ReserveDragon />
+      </div>
     </div>
   );
 };
