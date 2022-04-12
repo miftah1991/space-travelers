@@ -9,6 +9,7 @@ const defaultState = [{
   name: '',
   type: '',
   image: '',
+  reserved: true,
 }];
 
 // Reducer
