@@ -11,6 +11,7 @@ const Dragons = () => {
       name={dragon.name}
       type={dragon.type}
       image={dragon.image}
+      reserved={dragon.reserved}
     />
   ));
   return <div>{dragonList}</div>;
