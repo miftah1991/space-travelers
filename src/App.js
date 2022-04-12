@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import React from 'react';
 import MainHeader from './components/MainHeader';
-import MyProfile from './pages/MyProfile';
 import DragonsPage from './pages/DragonsPage';
 import MissionsPage from './pages/MissionsPage';
-import RocketsPage from './pages/RocketsPage';
+
+const MyProfile = React.lazy(() => import('./pages/MyProfile'));
+const RocketsPage = React.lazy(() => import('./pages/RocketsPage'));
 
 function App() {
   return (
