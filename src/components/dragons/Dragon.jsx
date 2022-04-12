@@ -8,6 +8,7 @@ const Dragon = (props) => {
     name,
     type,
     image,
+    reserved,
   } = props;
 
   return (
@@ -19,6 +20,7 @@ const Dragon = (props) => {
           The type of this Dragon is:
           <span>{type}</span>
           .
+          <span>{reserved}</span>
         </p>
         <ReserveDragon />
       </div>
@@ -31,6 +33,7 @@ Dragon.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   image: PropTypes.string,
+  reserved: PropTypes.bool,
 };
 
 Dragon.defaultProps = {
@@ -38,6 +41,7 @@ Dragon.defaultProps = {
   name: 'Mary',
   type: 'Cat',
   image: 'string',
+  reserved: false,
 };
 
 export default Dragon;
