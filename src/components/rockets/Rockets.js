@@ -6,6 +6,7 @@ export const fetchRockets = () => async (dispatch) => {
 
 export const rocketsReducer = (state = [], action) => {
   const rockets = [];
+  let newState = [];
   switch (action.type) {
     case 'FETCH_ROCKETS':
       action.payload.forEach((rocket) => {
@@ -13,10 +14,18 @@ export const rocketsReducer = (state = [], action) => {
           id: rocket.rocket_id,
           name: rocket.rocket_name,
           type: rocket.rocket_type,
-          flickr_images: rocket.flickr_images[0],
+          flickrImages: rocket.flickr_images[0],
+          description: rocket.description,
+          reserved: false,
         });
       });
       return rockets;
+    case 'RESERVE_ROCKET':
+      newState = state.map((rocket) => {
+        if (rocket.id !== action.id) return { ...rocket };
+        return { ...rocket, reserved: !rocket.reserved };
+      });
+      return newState;
     default:
       return state;
   }
