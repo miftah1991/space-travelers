@@ -4,8 +4,7 @@ import {
 import thunk from 'redux-thunk';
 import { rocketsReducer } from '../components/rockets/Rockets';
 import dragonsReducer from './dragons/dragonsReducer';
-
-const missionsReducer = '';
+import missionsReducer from './missons/missionsReducer';
 
 /* eslint-disable no-underscore-dangle */
 
