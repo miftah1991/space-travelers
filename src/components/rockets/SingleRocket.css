@@ -14,13 +14,9 @@
   width: 80%;
 }
 
-.infoContainer p {
-  font-size: 2rem;
-}
-
 .infoButton {
   display: block;
-  padding: 0.3em 1.2em;
+  padding: 0.1em 1.7em;
   margin: 0 0.3em 0.3em 0;
   height: 35px;
   font-size: 1.2em;
@@ -40,7 +36,7 @@
 
 .cancelButton {
   display: block;
-  padding: 0.3em 1.2em;
+  padding: 0.1em 1.7em;
   margin: 0 0.3em 0.3em 0;
   height: 35px;
   font-size: 1.2em;
@@ -57,21 +53,4 @@
 .cancelButton:hover {
   background-color: black;
   color: #fff;
-}
-
-.bg-primary {
-  background-color: rgba(13, 110, 253, 1) !important;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
 }

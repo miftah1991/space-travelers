@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Badge } from 'react-bootstrap';
+import CancelDragon from './CancelDragon';
 import ReserveDragon from './ReserveDragon';
 
 const Dragon = (props) => {
@@ -8,6 +10,7 @@ const Dragon = (props) => {
     name,
     type,
     image,
+    reserved,
   } = props;
 
   return (
@@ -19,8 +22,9 @@ const Dragon = (props) => {
           The type of this Dragon is:
           <span>{type}</span>
           .
+          {reserved && <Badge>Reserved</Badge>}
         </p>
-        <ReserveDragon />
+        {reserved ? <CancelDragon id={id} /> : <ReserveDragon id={id} />}
       </div>
     </div>
   );
@@ -31,6 +35,7 @@ Dragon.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   image: PropTypes.string,
+  reserved: PropTypes.bool,
 };
 
 Dragon.defaultProps = {
@@ -38,6 +43,7 @@ Dragon.defaultProps = {
   name: 'Mary',
   type: 'Cat',
   image: 'string',
+  reserved: false,
 };
 
 export default Dragon;
