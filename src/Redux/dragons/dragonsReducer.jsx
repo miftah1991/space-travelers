@@ -2,6 +2,8 @@ import axios from 'axios';
 
 // Actions
 const UPDATE_DRAGONS = 'UPDATE_DRAGONS';
+const RESERVE_DRAGON_ACTION = 'RESERVE_DRAGON_ACTION';
+const CANCEL_DRAGON_ACTION = 'CANCEL_DRAGON_ACTION';
 
 // Default State
 const defaultState = [{
@@ -9,14 +11,35 @@ const defaultState = [{
   name: '',
   type: '',
   image: '',
-  reserved: true,
+  reserved: false,
 }];
 
 // Reducer
 export default function dragonsReducer(state = defaultState, action) {
+  let newState = [];
   switch (action.type) {
     case (UPDATE_DRAGONS):
       return action.dragons;
+    case (RESERVE_DRAGON_ACTION):
+      newState = state.map((dragon) => {
+        if (dragon.id === action.id) {
+          const newDragon = { ...dragon };
+          newDragon.reserved = true;
+          return newDragon;
+        }
+        return dragon;
+      });
+      return newState;
+    case (CANCEL_DRAGON_ACTION):
+      newState = state.map((dragon) => {
+        if (dragon.id === action.id) {
+          const newDragon = { ...dragon };
+          newDragon.reserved = false;
+          return newDragon;
+        }
+        return dragon;
+      });
+      return newState;
     default:
       return state;
   }
@@ -27,6 +50,20 @@ export function updateDragons(dragons) {
   return {
     type: UPDATE_DRAGONS,
     dragons,
+  };
+}
+
+export function reserveDragonAction(id) {
+  return {
+    type: RESERVE_DRAGON_ACTION,
+    id,
+  };
+}
+
+export function cancelDragonAction(id) {
+  return {
+    type: CANCEL_DRAGON_ACTION,
+    id,
   };
 }
 

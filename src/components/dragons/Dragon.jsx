@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Badge } from 'react-bootstrap';
+import CancelDragon from './CancelDragon';
 import ReserveDragon from './ReserveDragon';
 
 const Dragon = (props) => {
@@ -20,9 +22,9 @@ const Dragon = (props) => {
           The type of this Dragon is:
           <span>{type}</span>
           .
-          <span>{reserved}</span>
+          {reserved && <Badge>Reserved</Badge>}
         </p>
-        <ReserveDragon />
+        {reserved ? <CancelDragon id={id} /> : <ReserveDragon id={id} />}
       </div>
     </div>
   );
