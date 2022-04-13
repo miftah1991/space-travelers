@@ -1,19 +1,27 @@
-import getMissions from './missionsAPIHelper';
+import getMissions from "./missionsAPIHelper";
 
-const GET_ALL_MISSIONS = 'GET_ALL_MISSIONS';
-const TOGGLE_MISSION = 'TOGGLE_MISSION';
+const GET_ALL_MISSIONS = "GET_ALL_MISSIONS";
+const TOGGLE_MISSION = "TOGGLE_MISSION";
 
-const initialState = [];
+const initialState = [
+  {
+    mission_id: "",
+    mission_name: "",
+    description: "",
+    reserved: false,
+  },
+];
 
 export const getAllMissions = () => async (dispatch) => {
   const missions = await getMissions();
-  console.log(missions);
-  const missionsForDispatch = missions.map((mission) => ({
-    mission_id: mission.mission_id,
-    mission_name: mission.mission_name,
-    description: mission.description,
-    reserved: false,
-  }));
+  const missionsForDispatch = missions.map((mission) => {
+    return {
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+      reserved: false,
+    };
+  });
   dispatch({
     type: GET_ALL_MISSIONS,
     payload: missionsForDispatch,
