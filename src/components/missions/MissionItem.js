@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import './missionsStyles.css';
 import { toggleMission } from '../../Redux/missons/missionsReducer';
 
 const MissionItem = ({ mission }) => {
@@ -11,19 +12,19 @@ const MissionItem = ({ mission }) => {
   };
 
   return (
-    <tr>
-      <td>{mission.mission_name}</td>
-      <td>{mission.description}</td>
-      <td>
-        <div>
+    <tr className="wrapper">
+      <td className="col disc">{mission.mission_name}</td>
+      <td className="col disc">{mission.description}</td>
+      <td className="col">
+        <div className="member">
           <span>
             {!mission.reserved && 'Not A Member'}
             {mission.reserved && 'Active Member'}
           </span>
         </div>
       </td>
-      <td>
-        <button type="button" onClick={toggleMissionHandler}>
+      <td className="col">
+        <button className="btn" type="button" onClick={toggleMissionHandler}>
           {mission.reserved ? 'Leave Mission' : 'Join Mission'}
         </button>
       </td>

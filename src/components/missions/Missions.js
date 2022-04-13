@@ -5,13 +5,13 @@ import MissionItem from './MissionItem';
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
   return (
-    <table>
+    <table className="contaner">
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Reservation</th>
+          <th className="title">Mission</th>
+          <th className="title">Description</th>
+          <th className="title">Status</th>
+          <th className="title">Reservation</th>
         </tr>
       </thead>
       <tbody>

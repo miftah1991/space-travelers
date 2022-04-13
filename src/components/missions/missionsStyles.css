@@ -1,0 +1,32 @@
+* {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.title {
+    padding: 1.6rem;
+    font-size: 1.5rem;
+    color: #277180ca;
+}
+
+.btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.23rem;
+    border: 2px solid rgb(0, 162, 255);
+    border-radius: 10px;
+}
+
+.col {
+    padding: 1rem;
+}
+
+.member {
+    background-color: rgba(255, 5, 5, 0.568);
+    padding: 0.4rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.disc {
+    font-size: 1.3rem;
+}
