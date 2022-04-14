@@ -26,7 +26,7 @@ function SingleRocket({ rocket }) {
           {' '}
           {description}
         </p>
-        {rocketState ? <button id={id} onClick={(e) => reserveRocket(e.target.id)} className="cancelButton" type="button">Cancel Reservation</button> : <button id={id} onClick={(e) => reserveRocket(e.target.id)} className="infoButton" type="button">Reserve Rocket</button> }
+        {rocketState ? <button id={id} onClick={(e) => reserveRocket(e.target.id)} className="cancelButton" type="button">Cancel Reservation</button> : <button data-testid="reserve-btn" id={id} onClick={(e) => reserveRocket(e.target.id)} className="infoButton" type="button">Reserve Rocket</button> }
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import "./MyProfile.css";
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import './MyProfile.css';
 
 function MyProfile() {
   const rockets = useSelector((state) => state.rockets);
@@ -22,7 +22,7 @@ function MyProfile() {
 
   useEffect(() => {
     const resMissions = missions.filter(
-      (mission) => mission.reserved && mission
+      (mission) => mission.reserved && mission,
     );
     setReservedMissions(resMissions);
   }, []);
