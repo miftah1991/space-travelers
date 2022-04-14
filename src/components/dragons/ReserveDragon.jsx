@@ -7,7 +7,7 @@ const ReserveDragon = (props) => {
   const { id } = props;
   const dispatch = useDispatch();
 
-  return <button onClick={() => dispatch(reserveDragonAction(id))} type="button" className="reserve-dragon">Reserve</button>;
+  return <button onClick={() => dispatch(reserveDragonAction(id))} type="button" className="reserve-dragon" data-testid="reserve-dragon">Reserve</button>;
 };
 
 ReserveDragon.propTypes = {
