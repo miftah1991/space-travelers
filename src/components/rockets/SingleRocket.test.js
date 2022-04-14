@@ -26,5 +26,5 @@ describe('testing Header', () => {
     }
 
     expect(mockhandler).toHaveBeenCalledTimes(1);
-  });  
+  });
 });

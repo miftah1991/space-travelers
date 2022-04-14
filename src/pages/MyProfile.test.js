@@ -1,5 +1,4 @@
 import renderer from 'react-test-renderer';
-import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../Redux/storeSetUp';
 import MyProfile from './MyProfile';
@@ -9,5 +8,4 @@ describe('testing My Profile', () => {
     const tree = renderer.create(<Provider store={store}><MyProfile /></Provider>).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  
 });
