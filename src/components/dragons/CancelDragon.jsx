@@ -7,7 +7,7 @@ const CancelDragon = (props) => {
   const { id } = props;
   const dispatch = useDispatch();
 
-  return <button onClick={() => dispatch(cancelDragonAction(id))} type="button" className="cancel-dragon">Cancel</button>;
+  return <button onClick={() => dispatch(cancelDragonAction(id))} type="button" className="cancel-dragon" data-testid="cancel-dragon">Cancel</button>;
 };
 
 CancelDragon.propTypes = {
